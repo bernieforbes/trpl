@@ -1,5 +1,3 @@
-use std::fmt;
-
 trait OutlinePrint: fmt::Display {
     fn outline_print(&self) {
         let output = self.to_string();
@@ -12,4 +10,22 @@ trait OutlinePrint: fmt::Display {
     }
 }
 
-fn main() {}
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+impl OutlinePrint for Point {}
+
+use std::fmt;
+
+impl fmt::Display for Point {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "({}, {})", self.x, self.y)
+    }
+}
+
+fn main() {
+    let p = Point { x: 1, y: 3 };
+    p.outline_print();
+}
