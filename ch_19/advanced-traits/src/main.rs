@@ -26,4 +26,7 @@ impl Human {
     }
 }
 
-fn main() {}
+fn main() {
+    let person = Human;
+    person.fly();
+}
