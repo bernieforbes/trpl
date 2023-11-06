@@ -1,3 +1,4 @@
+#![allow(unused)]
 fn main() {
-    println!("Hello, world!");
+    let v: Vec<u32> = vec![1, 2, 3];
 }
