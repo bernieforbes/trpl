@@ -15,6 +15,7 @@ impl Rectangle {
 }
 
 fn main() {
+    // demonstrates setting of struct fields
     let rect1 = Rectangle {
         width: 30,
         height: 50,
